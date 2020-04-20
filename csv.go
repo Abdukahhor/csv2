@@ -62,9 +62,9 @@ func UnmarshalNoHeader(in io.Reader, out interface{}) error {
 	return nil
 }
 
-//UnmarshalAll parses the CSV from the reader in the interface.
+//Unmarshal parses the CSV from the reader in the interface.
 //Read all from io.Reader and after that proccess
-func UnmarshalAll(in io.Reader, out interface{}) error {
+func Unmarshal(in io.Reader, out interface{}) error {
 
 	rv := reflect.ValueOf(out)
 	if rv.Kind() != reflect.Ptr && rv.IsNil() {
